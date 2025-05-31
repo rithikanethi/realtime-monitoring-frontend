@@ -93,7 +93,7 @@ function App() {
       {cpuValue > 90 && (
         <div className="alert-box">
           ⚠️ High CPU Usage: {cpuValue.toFixed(2)}% <br />
-          📧 Alert email has been sent to: <strong>teamlead@university.edu</strong> <br />
+          📧 Alert email has been sent to: <strong>lzhang@niu.edu</strong> <br />
           ⏰ {new Date().toLocaleTimeString()}
         </div>
       )}

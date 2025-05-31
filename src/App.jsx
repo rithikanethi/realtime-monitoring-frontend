@@ -110,7 +110,8 @@ function App() {
             <h2>{metric.name}</h2>
             <p className="value">{metric.value}</p>
             <p className="timestamp">{metric.timestamp}</p>
-            <p className="contributor">👤 Submitted by: {metric.contributor}</p>
+            <p className="contributor">👤 Submitted by: {metric.contributor}
+            </p>
           </motion.div>
         ))}
       </div>
@@ -119,7 +120,12 @@ function App() {
       {renderChartSection("Memory Usage Over Time", memoryHistory, "GB", "#82ca9d", [0, 20])}
       {renderChartSection("Disk Usage Over Time", diskHistory, "%", "#ff7f50")}
 
-      <motion.div className="chart-section" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.6 }}>
+      <motion.div
+        className="chart-section"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.6 }}
+      >
         <h2>Network Usage (Bar Chart)</h2>
         <ResponsiveContainer width="100%" height={250}>
           <BarChart data={networkHistory}>
@@ -159,4 +165,5 @@ function App() {
 }
 
 export default App;
+
 
